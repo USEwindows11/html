@@ -1,0 +1,59 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .rotate-box {
+          display: flex; /* 父级使用弹性布局实现居中 */
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        .circle {
+            width: 40vw;
+            height: 40vw;
+            background-color: white;
+            border-radius: 50%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        body{
+            background-color: red;
+        }
+        .top-fixed-image {
+          position: fixed;/* 固定定位 */
+          top: 20vw;           /* 紧贴顶部 */
+          left: 0%;          /* 左侧对齐 */
+          width: 100%;      /* 全屏宽度 */
+          z-index: 9999;    /* 确保最高层级 */
+          object-fit: cover;/* 保持图片比例 */
+          height: 80px;
+          animation: spin 2s linear infinite;  /* 自定义高度 */
+          display: flex; /* 父级使用弹性布局实现居中 */
+          justify-content: center;
+          align-items: center;
+        }
+    </style>
+    <title>CSS Circle</title>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="top-fixed-image"
+    >
+        <img src="新建 BMP 图像.bmp" >
+    </div>
+    <div>
+        <audio controls loop="loop">
+            <source src="M500002Rt6DM2wvhKh.mp3" type="audio/mp3">
+        </audio>
+        <p>点击上面的按钮播放音乐</p>
+    </div>
+</body>
+</html>
+
